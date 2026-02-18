@@ -1,4 +1,4 @@
 {
 	"installCommand": "bun install",
-	"buildCommand": "bun run fetch-games && bun run analyze && bun run build"
+	"buildCommand": "bun run scripts/fetch-games.ts papi962 aralys17 && bun run analyze && bun run build"
 }
