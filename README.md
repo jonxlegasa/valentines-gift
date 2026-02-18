@@ -1,42 +1,41 @@
-# sv
+# Chess & Love
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A Valentine's Day gift — an interactive web app that visualizes two players' shared chess history from Chess.com. It turns your games into a scrollable love letter with parallax hearts, game replays, stats, an opening explorer, and novelty detection.
 
-## Creating a project
+## Tech Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [SvelteKit](https://svelte.dev/docs/kit) + [Svelte 5](https://svelte.dev)
+- [TailwindCSS 4](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- [chess.js](https://github.com/jhlywa/chess.js) + [svelte-chess](https://github.com/gtim/svelte-chess)
+- [lowdb](https://github.com/typicode/lowdb) for local JSON database
+- [Bun](https://bun.sh) as the runtime & package manager
 
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-bun x sv create --template minimal --types ts --add prettier --install bun chess-and-love
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Getting Started
 
 ```sh
-npm run dev
+# Install dependencies
+bun install
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# Start the dev server
+bun run dev
 ```
 
-## Building
+## Scripts
 
-To create a production version of your app:
+| Command | Description |
+|---------|-------------|
+| `bun run dev` | Start the dev server |
+| `bun run build` | Build for production |
+| `bun run preview` | Preview the production build |
+| `bun run check` | Run svelte-check for type errors |
+| `bun run lint` | Check formatting with Prettier |
+| `bun run format` | Auto-format with Prettier |
+| `bun run fetch-games` | Fetch games from Chess.com |
+| `bun run analyze` | Analyze games to build the opening trie, detect novelties, and generate `static/data/db.json` |
 
-```sh
-npm run build
-```
+## Data Pipeline
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+1. **Fetch** — `bun run fetch-games` downloads PGN files from Chess.com into `static/games/`.
+2. **Analyze** — `bun run analyze` parses the PGNs, builds a move trie, identifies opening branches and novelties, and writes `static/data/db.json`.
+3. **Serve** — The SvelteKit app loads `db.json` at runtime and renders the interactive sections.
