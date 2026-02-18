@@ -153,7 +153,7 @@
 </script>
 
 {#if lines.length > 0}
-  <div class="grid grid-cols-2 gap-4 sm:gap-5 w-full max-w-3xl mx-auto">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 w-full max-w-3xl mx-auto">
     {#each lines.slice(0, limit) as line, i}
       <div class="bg-white border-[3px] border-black shadow-[4px_4px_0_#be185d] rounded-lg p-3 flex flex-col items-center gap-2">
         <!-- Mini board -->

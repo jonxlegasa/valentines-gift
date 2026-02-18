@@ -73,9 +73,9 @@
 
 </script>
 
-<div class="h-screen w-full overflow-y-scroll overflow-x-hidden scroll-smooth bg-[#db2777] space-y-48" onscroll={onScroll}>
+<div class="h-svh w-full overflow-y-scroll overflow-x-hidden scroll-smooth bg-[#db2777] space-y-24 sm:space-y-48" onscroll={onScroll}>
   <!-- Section 0: Will you be my Valentine? -->
-  <section class="h-screen w-full flex items-center justify-center relative">
+  <section class="min-h-svh w-full flex items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={0} density={3.5} />
     <div class="text-center text-white max-w-2xl px-8 relative z-30 flex flex-col items-center gap-6">
       <p class="text-lg tracking-[0.3em] uppercase text-rose-200 animate-pulse">Happy Valentine's Day</p>
@@ -90,11 +90,11 @@
   </section>
 
   <!-- Section 1: Chess & Love hero -->
-  <section class="h-screen w-full flex items-center justify-center relative">
+  <section class="min-h-svh w-full flex items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={1} density={2.0} />
     <div class="relative z-30 flex flex-col items-center gap-6 text-center text-white">
       {#if hasDbData}
-        <h1 class="text-6xl md:text-8xl font-bold drop-shadow-lg">Chess & Love</h1>
+        <h2 class="text-6xl md:text-8xl font-bold drop-shadow-lg">Chess & Love</h2>
         <RapidReplay games={dbGames} />
         <div class="max-w-md mx-auto">
           <div class="bg-white border-[3px] border-black shadow-[5px_5px_0_#be185d] rounded-lg p-5">
@@ -103,14 +103,14 @@
         </div>
         <div class="mt-4 animate-bounce text-rose-300 text-3xl">&#9661;</div>
       {:else}
-        <h1 class="text-6xl md:text-8xl font-bold drop-shadow-lg">Chess & Love</h1>
+        <h2 class="text-6xl md:text-8xl font-bold drop-shadow-lg">Chess & Love</h2>
         <div class="mt-8 animate-bounce text-rose-300 text-3xl"></div>
       {/if}
     </div>
   </section>
 
   <!-- Section 2: Our First Game -->
-  <section class="h-screen w-full flex flex-col items-center justify-center relative">
+  <section class="min-h-svh w-full flex flex-col items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={1} density={1.5} />
     {#if hasDbData}
       <div class="relative z-30 w-full max-w-4xl mx-auto px-8 pt-4 pb-2 shrink-0">
@@ -134,7 +134,7 @@
   </section>
 
   <!-- Section 3: By The Numbers -->
-  <section class="h-screen w-full flex items-center justify-center relative">
+  <section class="min-h-svh w-full flex items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={2} density={1.3} />
     <div class="text-center text-white max-w-3xl px-8 relative z-30">
       {#if stats}
@@ -178,10 +178,12 @@
         <div class="mt-4 max-w-sm mx-auto">
           <div class="bg-white border-[3px] border-black shadow-[4px_4px_0_#be185d] rounded-lg px-4 py-3">
             <p class="text-gray-800 text-base leading-relaxed">
-              {#if stats.leader === 'aralys17'}
+              {#if stats.wins[stats.players[0]] === stats.wins[stats.players[1]]}
+                We're tied at {stats.wins[stats.players[0]]} each. Perfectly balanced, just like us. &#9829;
+              {:else if nameOf(stats.leader) === 'you'}
                 Looks like you've been kicking my ass... {stats.wins[stats.leader]} to {stats.wins[stats.leader === stats.players[0] ? stats.players[1] : stats.players[0]]}. But who's counting? &#9829;
               {:else}
-                I might be ahead {stats.wins[stats.leader]} to {stats.wins[stats.leader === stats.players[0] ? stats.players[1] : stats.players[0]]}, but every game with you is a win. &#9829;
+                Oh looks like I've been winning... {stats.wins[stats.leader]} to {stats.wins[stats.leader === stats.players[0] ? stats.players[1] : stats.players[0]]}. But every game with you is a win. &#9829;
               {/if}
             </p>
           </div>
@@ -195,7 +197,7 @@
 
   <!-- Section 4: How We Start — top opening lines side by side -->
   {#if hasDbData && dbBranches.length > 0}
-    <section class="h-screen w-full flex flex-col items-center justify-center relative">
+    <section class="min-h-svh w-full flex flex-col items-center justify-center relative">
       <ParallaxHearts {scrollY} sectionIndex={3} density={1.1} />
       <div class="relative z-30 w-full max-w-3xl mx-auto px-6 flex flex-col items-center gap-5">
         <h2 class="text-5xl sm:text-6xl font-bold text-white text-center drop-shadow-md">How We Start</h2>
@@ -211,7 +213,7 @@
 
   <!-- Section 7: Our Opening Book (shows when branches or novelties exist) -->
   {#if dbBranches.length > 0 || dbNovelties.length > 0}
-    <section class="h-screen w-full flex flex-col relative">
+    <section class="min-h-svh w-full flex flex-col relative">
       <ParallaxHearts {scrollY} sectionIndex={8} density={0.7} />
       <div class="relative z-30 w-full max-w-2xl mx-auto px-8 pt-10 pb-3 shrink-0">
         <h2 class="text-5xl sm:text-6xl font-bold text-white text-center drop-shadow-md">Our Opening Book</h2>
@@ -228,7 +230,7 @@
   {/if}
 
   <!-- Section 8: Browse All Games -->
-  <section class="h-screen w-full flex flex-col items-center justify-center relative">
+  <section class="min-h-svh w-full flex flex-col items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={9} density={0.5} />
     <div class="relative z-30 w-full max-w-4xl mx-auto px-8 pt-6 pb-2 shrink-0">
       <h2 class="text-4xl sm:text-5xl font-bold text-white text-center drop-shadow-md">Want to look through all our games?</h2>
@@ -243,7 +245,7 @@
   </section>
 
   <!-- Section 9: Forever -->
-  <section class="h-screen w-full flex items-center justify-center relative">
+  <section class="min-h-svh w-full flex items-center justify-center relative">
     <ParallaxHearts {scrollY} sectionIndex={10} density={0.6} />
     <div class="text-center text-white max-w-2xl px-8 relative z-30">
       <h2 class="text-6xl font-bold mb-8 drop-shadow-md">Forever Yours</h2>

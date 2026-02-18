@@ -130,6 +130,7 @@
 {#each layers as layer, layerIdx}
   <div
     class="absolute inset-0 pointer-events-none"
+    aria-hidden="true"
     style="z-index: {layer.z}; transform: translateY({-layerOffset(layer.speed)}px); will-change: transform;{layer.blur ? ` filter: blur(${layer.blur}px);` : ''}"
   >
     {#each layer.icons as icon, iconIdx}

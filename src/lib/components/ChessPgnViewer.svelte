@@ -254,6 +254,7 @@
   {#if games.length > 1}
     <div class="mb-3">
       <select
+        aria-label="Select a game"
         class="w-full px-3 py-2 rounded-lg bg-white border-2 border-black shadow-[3px_3px_0_#000] text-gray-900 text-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-400/50"
         bind:value={selectedGameIndex}
       >
@@ -370,22 +371,22 @@
   </div>
 
   <!-- Navigation controls -->
-  <div class="flex items-center justify-center gap-2 mt-3">
+  <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-3">
     <button
-      class="px-3 py-1.5 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+      class="min-w-[44px] min-h-[44px] px-3 py-2 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 text-lg hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
       onclick={goToStart}
       disabled={atStart}
       aria-label="Go to start"
     >⏮</button>
     <button
-      class="px-3 py-1.5 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+      class="min-w-[44px] min-h-[44px] px-3 py-2 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 text-lg hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
       onclick={prevMove}
       disabled={atStart}
       aria-label="Previous move"
     >◀</button>
-    <span class="text-white/80 text-sm font-mono min-w-[5rem] text-center">{moveCounterText}</span>
+    <span class="text-white/80 text-xs sm:text-sm font-mono min-w-[4rem] sm:min-w-[5rem] text-center">{moveCounterText}</span>
     <button
-      class="px-4 py-1.5 rounded-lg transition-all
+      class="min-w-[48px] min-h-[44px] px-4 py-2 rounded-lg text-lg transition-all
              {isPlaying
                ? 'bg-pink-500 border-2 border-black shadow-[2px_2px_0_#000] text-white'
                : 'bg-yellow-300 border-2 border-black shadow-[3px_3px_0_#000] text-gray-900 hover:shadow-[1px_1px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px]'}
@@ -395,13 +396,13 @@
       aria-label={isPlaying ? 'Pause auto-play' : 'Play all moves'}
     >{isPlaying ? '⏸' : '▶'}</button>
     <button
-      class="px-3 py-1.5 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+      class="min-w-[44px] min-h-[44px] px-3 py-2 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 text-lg hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
       onclick={nextMove}
       disabled={atEnd}
       aria-label="Next move"
     >⏩</button>
     <button
-      class="px-3 py-1.5 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+      class="min-w-[44px] min-h-[44px] px-3 py-2 rounded-md bg-white border-2 border-black shadow-[2px_2px_0_#000] text-gray-900 text-lg hover:shadow-[1px_1px_0_#000] hover:translate-x-[1px] hover:translate-y-[1px] disabled:opacity-30 disabled:cursor-not-allowed transition-all"
       onclick={goToEnd}
       disabled={atEnd}
       aria-label="Go to end"

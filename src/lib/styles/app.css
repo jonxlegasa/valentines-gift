@@ -119,3 +119,18 @@ body {
   background-color: #db2777;
   font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
 }
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
