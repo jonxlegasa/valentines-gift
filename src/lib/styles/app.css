@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* ── Valentine Rose Chess Board Theme ── */
+
+/* Board squares: light pink / deeper pink */
+cg-board {
+  background-color: #fce4ec;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cg id='a'%3E%3Cg id='b'%3E%3Cg id='c'%3E%3Cg id='d'%3E%3Crect width='1' height='1' id='e' opacity='0'/%3E%3Cuse x='1' y='1' href='%23e'/%3E%3Crect y='1' width='1' height='1' id='f' fill='%23ec4899' opacity='0.45'/%3E%3Cuse x='1' y='-1' href='%23f'/%3E%3C/g%3E%3Cuse x='2' href='%23d'/%3E%3C/g%3E%3Cuse x='4' href='%23c'/%3E%3C/g%3E%3Cuse y='2' href='%23b'/%3E%3C/g%3E%3Cuse y='4' href='%23a'/%3E%3C/svg%3E");
+}
+
+/* Last-move highlight: warm rose glow */
+cg-board square.last-move {
+  background-color: rgba(244, 114, 182, 0.45);
+}
+
+/* Selected square: pink highlight */
+cg-board square.selected {
+  background-color: rgba(236, 72, 153, 0.55);
+}
+
+/* Move destination dots: deep rose */
+cg-board square.move-dest {
+  background: radial-gradient(rgba(190, 24, 93, 0.5) 22%, #be185d 0, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 0);
+}
+
+cg-board square.oc.move-dest {
+  background: radial-gradient(transparent 0%, transparent 80%, rgba(190, 24, 93, 0.3) 80%);
+}
+
+cg-board square.move-dest:hover {
+  background: rgba(190, 24, 93, 0.35);
+}
+
+/* Check: romantic red radial */
+cg-board square.check {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(225, 29, 72, 1) 0%,
+    rgba(190, 24, 93, 1) 25%,
+    rgba(136, 19, 55, 0) 89%,
+    rgba(136, 19, 55, 0) 100%
+  );
+}
+
+/* Coordinate label colors for pink board */
+.cg-wrap.orientation-white coords.ranks coord:nth-child(2n),
+.cg-wrap.orientation-white coords.files coord:nth-child(2n),
+.cg-wrap.orientation-black coords.ranks coord:nth-child(2n + 1),
+.cg-wrap.orientation-black coords.files coord:nth-child(2n + 1) {
+  color: rgba(190, 24, 93, 0.7);
+}
+
+.cg-wrap.orientation-black coords.ranks coord:nth-child(2n),
+.cg-wrap.orientation-black coords.files coord:nth-child(2n),
+.cg-wrap.orientation-white coords.ranks coord:nth-child(2n + 1),
+.cg-wrap.orientation-white coords.files coord:nth-child(2n + 1) {
+  color: rgba(252, 228, 236, 0.9);
+}
+
+/* ── Chess.com "Neo" Piece Set ── */
+.cg-wrap piece.pawn.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wp.png");
+}
+.cg-wrap piece.bishop.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wb.png");
+}
+.cg-wrap piece.knight.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wn.png");
+}
+.cg-wrap piece.rook.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wr.png");
+}
+.cg-wrap piece.queen.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wq.png");
+}
+.cg-wrap piece.king.white {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/wk.png");
+}
+.cg-wrap piece.pawn.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/bp.png");
+}
+.cg-wrap piece.bishop.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/bb.png");
+}
+.cg-wrap piece.knight.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/bn.png");
+}
+.cg-wrap piece.rook.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/br.png");
+}
+.cg-wrap piece.queen.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/bq.png");
+}
+.cg-wrap piece.king.black {
+  background-image: url("https://images.chesscomfiles.com/chess-themes/pieces/neo/300/bk.png");
+}
+
+/* ── Neobrutalist Board Frames ── */
+.neo-board-frame {
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.neo-board-frame-sm {
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* ── Global ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #db2777;
+  font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}

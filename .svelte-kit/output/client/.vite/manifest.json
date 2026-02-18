@@ -1,0 +1,169 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "file": "_app/immutable/entry/app.B_TK0rOc.js",
+    "name": "entry/app",
+    "src": ".svelte-kit/generated/client-optimized/app.js",
+    "isEntry": true,
+    "imports": [
+      "_Dd0uHKTZ.js",
+      "_D6id5OkL.js",
+      "_BoIuIueb.js",
+      "_NcohxHJ3.js",
+      "_QKvlJIKN.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.CQsfwUuC.js",
+    "name": "nodes/0",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_NcohxHJ3.js",
+      "_D6id5OkL.js",
+      "_CkGnspBE.js",
+      "_weeuRzHt.js"
+    ],
+    "css": [
+      "_app/immutable/assets/0.D5hzgetn.css"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.cuKAuu_S.js",
+    "name": "nodes/1",
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_NcohxHJ3.js",
+      "_DL-LV2aR.js",
+      "_D6id5OkL.js",
+      "_BoIuIueb.js",
+      "_ALiM22cZ.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "file": "_app/immutable/nodes/2.BJN8xQRS.js",
+    "name": "nodes/2",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
+    "isEntry": true,
+    "imports": [
+      "_CG02VQHH.js"
+    ]
+  },
+  "_ALiM22cZ.js": {
+    "file": "_app/immutable/chunks/ALiM22cZ.js",
+    "name": "entry",
+    "imports": [
+      "_D6id5OkL.js",
+      "_QKvlJIKN.js"
+    ]
+  },
+  "_BoIuIueb.js": {
+    "file": "_app/immutable/chunks/BoIuIueb.js",
+    "name": "render",
+    "imports": [
+      "_D6id5OkL.js",
+      "_NcohxHJ3.js"
+    ]
+  },
+  "_CG02VQHH.js": {
+    "file": "_app/immutable/chunks/CG02VQHH.js",
+    "name": "2",
+    "isDynamicEntry": true,
+    "imports": [
+      "_NcohxHJ3.js",
+      "_QKvlJIKN.js",
+      "_D6id5OkL.js",
+      "_BoIuIueb.js",
+      "_Dd0uHKTZ.js",
+      "_weeuRzHt.js"
+    ],
+    "dynamicImports": [
+      "node_modules/svelte-chess/dist/index.js",
+      "node_modules/svelte-chess/dist/index.js",
+      "node_modules/svelte-chess/dist/index.js",
+      "node_modules/svelte-chess/dist/index.js"
+    ]
+  },
+  "_CkGnspBE.js": {
+    "file": "_app/immutable/chunks/CkGnspBE.js",
+    "name": "branches",
+    "imports": [
+      "_D6id5OkL.js"
+    ]
+  },
+  "_D6id5OkL.js": {
+    "file": "_app/immutable/chunks/D6id5OkL.js",
+    "name": "runtime"
+  },
+  "_DL-LV2aR.js": {
+    "file": "_app/immutable/chunks/DL-LV2aR.js",
+    "name": "legacy",
+    "imports": [
+      "_D6id5OkL.js"
+    ]
+  },
+  "_Dd0uHKTZ.js": {
+    "file": "_app/immutable/chunks/Dd0uHKTZ.js",
+    "name": "preload-helper",
+    "imports": [
+      "_D6id5OkL.js",
+      "_CkGnspBE.js"
+    ]
+  },
+  "_NcohxHJ3.js": {
+    "file": "_app/immutable/chunks/NcohxHJ3.js",
+    "name": "disclose-version",
+    "imports": [
+      "_D6id5OkL.js"
+    ]
+  },
+  "_QKvlJIKN.js": {
+    "file": "_app/immutable/chunks/QKvlJIKN.js",
+    "name": "index-client",
+    "imports": [
+      "_D6id5OkL.js"
+    ]
+  },
+  "_weeuRzHt.js": {
+    "file": "_app/immutable/chunks/weeuRzHt.js",
+    "name": "attributes",
+    "imports": [
+      "_D6id5OkL.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.-giKvG28.js",
+    "name": "entry/start",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_ALiM22cZ.js"
+    ]
+  },
+  "node_modules/svelte-chess/dist/index.js": {
+    "file": "_app/immutable/chunks/BC3OWYGz.js",
+    "name": "index",
+    "src": "node_modules/svelte-chess/dist/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_NcohxHJ3.js",
+      "_DL-LV2aR.js",
+      "_QKvlJIKN.js",
+      "_D6id5OkL.js",
+      "_Dd0uHKTZ.js",
+      "_CG02VQHH.js",
+      "_BoIuIueb.js",
+      "_weeuRzHt.js"
+    ],
+    "css": [
+      "_app/immutable/assets/index.BqXAd-ve.css"
+    ]
+  }
+}
