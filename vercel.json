@@ -1,3 +1,4 @@
 {
-	"installCommand": "bun install"
+	"installCommand": "bun install",
+	"buildCommand": "bun run fetch-games && bun run analyze && bun run build"
 }
